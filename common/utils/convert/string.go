@@ -1,8 +1,8 @@
 package convert
 
 import (
-	"strconv"
 	"fmt"
+	"strconv"
 )
 
 // Convert any type to string.

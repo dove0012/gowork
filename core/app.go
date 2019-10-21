@@ -1,14 +1,14 @@
 package core
 
 import (
-	mtime "common/utils/time"
-	"common/utils/log"
+	"gowork/common/utils/log"
+	mtime "gowork/common/utils/time"
+	"gowork/work"
+	"os"
 	"path/filepath"
 	"runtime"
-	"time"
 	"sync"
-	"work"
-	"os"
+	"time"
 )
 
 type App struct {

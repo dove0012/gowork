@@ -1,10 +1,10 @@
 package service
 
 import (
-	"gopkg.in/mgo.v2/bson"
-	"common/utils/log"
 	"common/utils/convert"
+	"common/utils/log"
 	"common/utils/mgodb"
+	"gopkg.in/mgo.v2/bson"
 )
 
 func GetHandicapById(han_id int64, result interface{}) {

@@ -1,19 +1,19 @@
 package main
 
 import (
-	"core"
-	"work"
-	"common/utils/log"
+	"gowork/common/utils/log"
+	"gowork/core"
+	"gowork/work"
 )
 
-const APP_VER = "1.0.0"
+const AppVer = "1.0.0"
 
 func main() {
 	app := core.NewApp()
-	app.Name = "goserver"
+	app.Name = "gowork"
 	app.Usage = "run services by go"
-	app.Version = APP_VER
+	app.Version = AppVer
 	app.Works = work.GetWorks()
 	app.Run()
-	log.Info("App is over")
+	log.Info("Application is over")
 }

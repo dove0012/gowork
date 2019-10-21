@@ -1,9 +1,9 @@
 package log
 
 import (
-	"runtime"
-	"common/utils/time"
+	"gowork/common/utils/time"
 	l "log"
+	"runtime"
 )
 
 func Error2Exit(err error, msg string) {

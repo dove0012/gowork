@@ -1,17 +1,17 @@
 package work
 
 import (
-	"common/utils/log"
-	"common/utils/amqp"
-	"common/utils/config"
-	"common/utils/json"
-	"common/utils/time"
-	"common/utils/convert"
-	"common/model"
-	"common/utils/mgodb"
-	rec "work/reckon"
 	"errors"
 	"fmt"
+	"gowork/common/model"
+	"gowork/common/utils/amqp"
+	"gowork/common/utils/config"
+	"gowork/common/utils/convert"
+	"gowork/common/utils/json"
+	"gowork/common/utils/log"
+	"gowork/common/utils/mgodb"
+	"gowork/common/utils/time"
+	rec "gowork/work/reckon"
 )
 
 type reckon struct {

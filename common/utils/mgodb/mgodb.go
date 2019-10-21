@@ -1,8 +1,8 @@
 package mgodb
 
 import (
-	"common/utils/log"
 	"common/utils/config"
+	"common/utils/log"
 	"gopkg.in/mgo.v2"
 	"sync"
 )
@@ -11,7 +11,7 @@ type Mgodb struct {
 	S *mgo.Session
 }
 
-var db *Mgodb = &Mgodb{}
+var db = &Mgodb{}
 var l sync.Mutex
 
 func Single() *Mgodb {

@@ -1,8 +1,8 @@
 package json
 
 import (
-	j "encoding/json"
 	"common/utils/log"
+	j "encoding/json"
 )
 
 func Unmarshal(data []byte, v interface{}) {

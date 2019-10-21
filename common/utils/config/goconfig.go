@@ -1,8 +1,8 @@
 package config
 
 import (
-	"github.com/Unknwon/goconfig"
 	"common/utils/log"
+	"github.com/Unknwon/goconfig"
 )
 
 type Cfg struct {
@@ -17,7 +17,7 @@ func init()  {
 	C.c = cfg
 }
 
-func NewCfg(fileName string) (*Cfg) {
+func NewCfg(fileName string) *Cfg {
 	if fileName == "config.ini" {
 		return C
 	}
@@ -26,37 +26,37 @@ func NewCfg(fileName string) (*Cfg) {
 	return &Cfg{c: cfg}
 }
 
-func (cfg *Cfg) GetString(section string, key string) (string) {
+func (cfg *Cfg) GetString(section string, key string) string {
 	v, err := cfg.c.GetValue(section, key)
 	log.Error2Exit(err, "goconfig.GetValue error")
 	return v
 }
 
-func (cfg *Cfg) GetStringByDefault(key string) (string) {
+func (cfg *Cfg) GetStringByDefault(key string) string {
 	v, err := cfg.c.GetValue(goconfig.DEFAULT_SECTION, key)
 	log.Error2Exit(err, "goconfig.GetValue error")
 	return v
 }
 
-func (cfg *Cfg) GetInt(section string, key string) (int64) {
+func (cfg *Cfg) GetInt(section string, key string) int64 {
 	v, err := cfg.c.Int64(section, key)
 	log.Error2Exit(err, "goconfig.Int64 error")
 	return v
 }
 
-func (cfg *Cfg) GetIntByDefault(key string) (int64) {
+func (cfg *Cfg) GetIntByDefault(key string) int64 {
 	v, err := cfg.c.Int64(goconfig.DEFAULT_SECTION, key)
 	log.Error2Exit(err, "goconfig.Int64 error")
 	return v
 }
 
-func (cfg *Cfg) GetFloat(section string, key string) (float64) {
+func (cfg *Cfg) GetFloat(section string, key string) float64 {
 	v, err := cfg.c.Float64(section, key)
 	log.Error2Exit(err, "goconfig.Float64 error")
 	return v
 }
 
-func (cfg *Cfg) GetFloatByDefault(key string) (float64) {
+func (cfg *Cfg) GetFloatByDefault(key string) float64 {
 	v, err := cfg.c.Float64(goconfig.DEFAULT_SECTION, key)
 	log.Error2Exit(err, "goconfig.Float64 error")
 	return v

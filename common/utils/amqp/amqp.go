@@ -1,9 +1,9 @@
 package amqp
 
 import (
-	rabbitmq "github.com/streadway/amqp"
-	"errors"
 	"common/utils/log"
+	"errors"
+	rabbitmq "github.com/streadway/amqp"
 )
 
 type Amqp struct {
@@ -53,7 +53,7 @@ func (amqb *Amqp) initMq() {
 	log.Error2Exit(err, "conn.Channel error")
 }
 
-func (amqp *Amqp) Receive() (<-chan rabbitmq.Delivery) {
+func (amqp *Amqp) Receive() <-chan rabbitmq.Delivery {
 	amqp.initMq()
 
 	q, err := amqp.ch.QueueDeclare(
