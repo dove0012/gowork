@@ -1,9 +1,9 @@
 package amqp
 
 import (
-	"common/utils/log"
 	"errors"
 	rabbitmq "github.com/streadway/amqp"
+	"gowork/common/utils/log"
 )
 
 type Amqp struct {

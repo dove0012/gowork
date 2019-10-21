@@ -1,15 +1,15 @@
 package service
 
 import (
-	"common/model"
-	"common/utils/convert"
-	"common/utils/log"
-	"common/utils/mgodb"
 	"crypto/hmac"
 	"crypto/sha1"
 	"encoding/hex"
 	"fmt"
 	"gopkg.in/mgo.v2/bson"
+	"gowork/common/model"
+	"gowork/common/utils/convert"
+	"gowork/common/utils/log"
+	"gowork/common/utils/mgodb"
 )
 
 func GetHandicapHashById(han_id int64, result interface{}) {

@@ -1,9 +1,9 @@
 package mgodb
 
 import (
-	"common/utils/config"
-	"common/utils/log"
 	"gopkg.in/mgo.v2"
+	"gowork/common/utils/config"
+	"gowork/common/utils/log"
 	"sync"
 )
 

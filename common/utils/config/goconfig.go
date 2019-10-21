@@ -1,8 +1,8 @@
 package config
 
 import (
-	"common/utils/log"
 	"github.com/Unknwon/goconfig"
+	"gowork/common/utils/log"
 )
 
 type Cfg struct {
