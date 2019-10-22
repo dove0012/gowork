@@ -1,7 +1,7 @@
 package log
 
 import (
-	"gserver/common/utils/time"
+	"gowork/common/utils/time"
 	l "log"
 	"runtime"
 )

@@ -11,6 +11,7 @@ import (
 	"time"
 )
 
+//App app struct
 type App struct {
 	Name    string
 	Usage   string
@@ -19,6 +20,7 @@ type App struct {
 	Wg      sync.WaitGroup
 }
 
+//NewApp return app struct
 func NewApp() *App {
 	return &App{
 		Name:    filepath.Base(os.Args[0]),
@@ -27,6 +29,7 @@ func NewApp() *App {
 	}
 }
 
+//Run run app
 func (app *App) Run() {
 	log.Info("App starting")
 	runtime.GOMAXPROCS(runtime.NumCPU())
@@ -62,6 +65,11 @@ func (app *App) runWork(Work work.Work) {
 				app.Wg.Done()
 			}()
 		}
+		defer func() {
+			if info := recover(); info != nil {
+				log.Error("异常退出 %s", info)
+			}
+		}()
 		Work.Run()
 	}()
 }
